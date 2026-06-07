@@ -55,8 +55,6 @@ async function onSubmit(event) {
     createGallery(photo.hits);
     checkMoreButton();
     event.target.reset();
-    const galleryItem = document.querySelector('.gallery-item');
-    heightImage = galleryItem.getBoundingClientRect().height * 2;
   } catch {
   iziToast.show({
     message: "Server Pixabay is not available",
@@ -81,7 +79,7 @@ async function onMoreBtnClick() {
     checkMoreButton();
   } catch {
     iziToast.show({
-      message: "Server Pixabay is not available",
+      message: 'Server Pixabay is not available',
       ...toastParam,
     });
   } finally {
